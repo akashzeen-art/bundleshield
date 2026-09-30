@@ -1,0 +1,83 @@
+.invoice {
+  border: 1.5px solid #1f2937;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  background: #fff;
+}
+
+.heading {
+  padding: 0.7rem;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-bottom: 1px solid #1f2937;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  border-bottom: 1px solid #1f2937;
+}
+
+.cell { padding: 0.75rem 0.9rem; }
+
+.side { border-left: 1px solid #1f2937; }
+
+.label, .seller { font-weight: 700; margin: 0 0 0.35rem; }
+
+.address {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #374151;
+}
+
+.pairs {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 1rem;
+  margin: 0;
+}
+
+.pairs dt { font-weight: 700; }
+
+.pairs dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.side .pairs dd { text-align: right; }
+
+.strong { font-weight: 700; }
+
+.rows { margin: 0; }
+
+.rows > div {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1rem;
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid #1f2937;
+}
+
+.rows dt { font-weight: 700; }
+.rows dd { margin: 0; }
+
+.totalRow { min-height: 6rem; }
+
+.footer {
+  padding: 0.9rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 560px) {
+  .split { grid-template-columns: 1fr; }
+  .side { border-left: none; border-top: 1px solid #1f2937; }
+  .rows > div { grid-template-columns: 1fr; gap: 0.15rem; }
+  .totalRow { min-height: 0; }
+  .totalRow > .cell:first-child { display: none; }
+  .totalRow > .side { border-top: none; }
+}

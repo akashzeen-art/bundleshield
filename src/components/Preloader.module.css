@@ -1,0 +1,165 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(160deg, #f0f9ff 0%, #e0f2fe 50%, #f0fdf4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  overflow: hidden;
+}
+
+.fade {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.wifiCorner {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  color: var(--blue);
+  animation: wifiPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes wifiPulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+
+.shieldCorner {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 14px;
+  color: var(--green-dark);
+  background: rgba(34,197,94,0.08);
+  border: 1px solid rgba(34,197,94,0.2);
+}
+
+.scanLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--green), transparent);
+  animation: scan 1.4s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.logoWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+  animation: logoPulse 2s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+.orbit {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(14,165,233,0.3);
+  animation: spin 4s linear infinite;
+}
+
+.orbitDot {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--grad);
+  box-shadow: 0 0 8px var(--blue);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.tagline {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.statusRow {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.statusItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.barWrap {
+  width: 240px;
+  height: 4px;
+  background: rgba(14,165,233,0.12);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--blue), var(--green));
+  box-shadow: 0 0 8px rgba(14,165,233,0.4);
+}
