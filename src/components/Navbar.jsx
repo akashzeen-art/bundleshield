@@ -15,6 +15,7 @@ const links = [
 
 const infoLinks = [
   { href: '/about', key: 'about' },
+  { href: '/contact', key: 'contact' },
   { href: '/terms', key: 'terms' },
   { href: '/privacy', key: 'privacy' },
   { href: '/refund', key: 'refund' },

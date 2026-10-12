@@ -8,6 +8,7 @@ const en = {
     privacyTitle: 'Privacy Policy — Bundle Shield',
     refundTitle: 'Refund & Cancellation Policy — Bundle Shield',
     aboutTitle: 'About Us — Bundle Shield',
+    contactTitle: 'Contact Us — Bundle Shield',
   },
   language: { label: 'Language', en: 'English', hi: 'हिंदी' },
   nav: {
@@ -196,6 +197,7 @@ const en = {
     brandSecond: 'Shield',
     rights: 'All rights reserved.',
     about: 'About Us',
+    contact: 'Contact Us',
     terms: 'Terms & Conditions',
     privacy: 'Privacy Policy',
     refund: 'Refund Policy',
@@ -203,6 +205,13 @@ const en = {
   aboutPage: {
     title: 'About Us',
     focusTitle: 'Our Focus',
+  },
+  contactPage: {
+    title: 'Contact Us',
+    subtitle: 'Have a question about your bundle, subscription or support? We are happy to help.',
+    addressTitle: 'Office Address',
+    emailTitle: 'Email',
+    phoneTitle: 'Phone',
   },
   legalPage: {
     home: 'Home',
@@ -301,6 +310,7 @@ const hi = {
     privacyTitle: 'गोपनीयता नीति — बंडल शील्ड',
     refundTitle: 'रिफ़ंड और कैंसलेशन नीति — बंडल शील्ड',
     aboutTitle: 'हमारे बारे में — बंडल शील्ड',
+    contactTitle: 'संपर्क करें — बंडल शील्ड',
   },
   language: { label: 'भाषा', en: 'English', hi: 'हिंदी' },
   nav: {
@@ -489,6 +499,7 @@ const hi = {
     brandSecond: 'शील्ड',
     rights: 'सर्वाधिकार सुरक्षित।',
     about: 'हमारे बारे में',
+    contact: 'संपर्क करें',
     terms: 'नियम और शर्तें',
     privacy: 'गोपनीयता नीति',
     refund: 'रिफ़ंड नीति',
@@ -496,6 +507,13 @@ const hi = {
   aboutPage: {
     title: 'हमारे बारे में',
     focusTitle: 'हमारा फ़ोकस',
+  },
+  contactPage: {
+    title: 'संपर्क करें',
+    subtitle: 'अपने बंडल, सब्सक्रिप्शन या सपोर्ट के बारे में कोई सवाल है? हम मदद के लिए तैयार हैं।',
+    addressTitle: 'ऑफ़िस का पता',
+    emailTitle: 'ईमेल',
+    phoneTitle: 'फ़ोन',
   },
   legalPage: {
     home: 'होम',

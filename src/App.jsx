@@ -14,6 +14,7 @@ import { plans, getSavedOrder, goToDownloadPage } from './data/plans'
 import WifiExtenderPage from './pages/WifiExtenderPage'
 import LegalPage from './pages/LegalPage'
 import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
 import { termsSections, TERMS_EFFECTIVE_DATE, TERMS_COMPANY, TERMS_PRODUCT } from './data/terms'
 import {
   privacySections, privacyIntro, PRIVACY_CONTACT,
@@ -47,6 +48,7 @@ export default function App() {
   const isPrivacyPage = path === '/privacy'
   const isRefundPage = path === '/refund'
   const isAboutPage = path === '/about'
+  const isContactPage = path === '/contact'
   const page = path === '/wifi-extender' ? <WifiExtenderPage />
     : path === '/antivirus' ? <WifiExtenderPage scrollToAntivirus />
     : isTermsPage ? (
@@ -79,16 +81,18 @@ export default function App() {
       />
     )
     : isAboutPage ? <AboutPage />
+    : isContactPage ? <ContactPage />
     : <HomePage />
 
   useEffect(() => {
     document.title = isAboutPage ? t.meta.aboutTitle
+      : isContactPage ? t.meta.contactTitle
       : isTermsPage ? t.meta.termsTitle
       : isPrivacyPage ? t.meta.privacyTitle
       : isRefundPage ? t.meta.refundTitle
       : isDownloadPage ? t.meta.downloadTitle
       : t.meta.title
-  }, [isDownloadPage, isAboutPage, isTermsPage, isPrivacyPage, isRefundPage, t])
+  }, [isDownloadPage, isAboutPage, isContactPage, isTermsPage, isPrivacyPage, isRefundPage, t])
 
   const [loading, setLoading] = useState(() => !sessionStorage.getItem(PRELOADER_KEY))
   const handleDone = useCallback(() => {
